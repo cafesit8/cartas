@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3f3752;
+}
+.container{
+    position: relative;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.container .serviceBox{
+    position: relative;
+    width: 350px;
+    height: 220px;
+    background: #51446e;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 4em;
+    cursor: pointer;
+    z-index: 10;
+}
+.container .serviceBox .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--i);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .serviceBox:hover .icon{
+    top: 25px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container .serviceBox:hover .icon ion-icon{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.container .serviceBox .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 61%;
+    transition: 0.5s;
+}
+.content p, h2{
+    font-size: 13px;
+    color: white;
+    margin: 0 10px;
+}
+.content h2{
+    font-size: 16px;
+    font: bold;
+}
+.container .serviceBox:hover .content{
+    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+}
